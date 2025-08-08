@@ -96,64 +96,71 @@
         <div class="accordion-tabs">
 
             <div class="tab" data-tab-button="tab1">What is roadmap.sh?<button class="button">v</button></div>
-            <div class="tab-content" data-tab-content="tab1">Lorem ipsum dolor sit amet.</div>
+            <div class="tab-content" data-tab-content="tab1">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Nesciunt minus ipsa, eaque dolore distinctio accusantium.</div>
 
             <div class="tab" data-tab-button="tab2">What are the plans for roadmap.sh?<button class="button">v</button>
             </div>
-            <div class="tab-content" data-tab-content="tab2">Lorem ipsum dolor sit amet.</div>
+            <div class="tab-content" data-tab-content="tab2">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque culpa eligendi saepe sequi repudiandae modi amet tempora nostrum, a praesentium temporibus
+                impedit assumenda veniam nemo.</div>
 
             <div class="tab" data-tab-button="tab3">How is roadmap.sh built?<button class="button">v</button></div>
-            <div class="tab-content" data-tab-content="tab3">Lorem ipsum dolor sit amet.
+            <div class="tab-content" data-tab-content="tab3">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ea voluptas, nihil corrupti tempore suscipit quasi atque saepe cupiditate perspiciatis maxime.
             </div>
 
             <div class="tab" data-tab-button="tab4">Can I use roadmap.sh in my team?<button class="button">v</button>
             </div>
-            <div class="tab-content" data-tab-content="tab4">Lorem ipsum dolor sit amet.</div>
+            <div class="tab-content" data-tab-content="tab4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Vitae aliquid, accusamus modi quod soluta animi totam distinctio?</div>
 
             <div class="tab" data-tab-button="tab5">How can I create custom readmaps?<button class="button">v</button>
             </div>
-            <div class="tab-content" data-tab-content="tab5">Lorem ipsum dolor sit amet.</div>
+            <div class="tab-content" data-tab-content="tab5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sapiente, ullam? Incidunt eos culpa pariatur dolorum nobis exercitationem iure voluptate!</div>
 
             <div class="tab" data-tab-button="tab6">Is roadmap.sh really 7th most starred project on GitHub?<button
                     class="button">v</button>
             </div>
-            <div class="tab-content" data-tab-content="tab6">Lorem ipsum dolor sit amet.</div>
+            <div class="tab-content" data-tab-content="tab6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <div>
 
-        </div>
-    </div>
+                </div>
+            </div>
 
-    <script>
+            <script>
 
-        function showTab(tabTrigger) {
-            const tabContents = document.querySelectorAll(".tab-content");
-            tabContents.forEach(tab => {
-                const contentKey = tab.dataset.tabContent;
+                function showTab(tabTrigger) {
+                    const tabContents = document.querySelectorAll(".tab-content");
+                    tabContents.forEach(tab => {
+                        const contentKey = tab.dataset.tabContent;
 
-                if ((contentKey === tabTrigger) && (tab.style.display === "none")) {
-                    tab.style.display = "block";
+                        if ((contentKey === tabTrigger) && (tab.style.display === "none")) {
+                            tab.style.display = "block";
 
-                } else {
-                    tab.style.display = "none";
-                }
-            });
+                        } else {
+                            tab.style.display = "none";
+                        }
+                    });
 
-        };
+                };
 
-        document.addEventListener("click", function (e) {
+                document.addEventListener("click", function (e) {
 
-            const tabTrigger = e.target.dataset.tabButton;
-            if (tabTrigger) {
-                showTab(tabTrigger);
-            }
-        });
+                    const tabTrigger = e.target.dataset.tabButton;
+                    if (tabTrigger) {
+                        showTab(tabTrigger);
+                    }
+                });
 
-        document.addEventListener("DOMContentLoaded", function () {
-            showTab("tab1");
-        })
+                document.addEventListener("DOMContentLoaded", function () {
+                    showTab("tab1");
+                })
 
 
 
-    </script>
+            </script>
 
 
 
