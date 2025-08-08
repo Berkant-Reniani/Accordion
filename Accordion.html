@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+
+    <style>
+        body {
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .accordion {
+            margin: 100px 100px;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .accordion-tabs {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-text {
+            margin: 0px;
+        }
+
+        .p1 {
+            font-size: 30px;
+            margin-bottom: 0px;
+        }
+
+        .p2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .tab {
+            background-color: black;
+            color: white;
+            font-size: 25px;
+            border: none;
+            width: 750px;
+            height: 60px;
+            border-radius: 15px;
+            cursor: pointer;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding-left: 20px;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .button {
+            position: absolute;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .tab-content {
+
+            border: 2px solid black;
+            background-color: white;
+            width: 750px;
+            height: fit-content;
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            font-size: 20px;
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="accordion">
+
+        <div class="header-text">
+
+            <p class="p1">Frequently Asked Questions</p>
+            <p class="p2">Here are some of the frequently asked questions</p>
+        </div>
+
+        <div class="accordion-tabs">
+
+            <div class="tab" data-tab-button="tab1">What is roadmap.sh?<button class="button">v</button></div>
+            <div class="tab-content" data-tab-content="tab1">Lorem ipsum dolor sit amet.</div>
+
+            <div class="tab" data-tab-button="tab2">What are the plans for roadmap.sh?<button class="button">v</button>
+            </div>
+            <div class="tab-content" data-tab-content="tab2">Lorem ipsum dolor sit amet.</div>
+
+            <div class="tab" data-tab-button="tab3">How is roadmap.sh built?<button class="button">v</button></div>
+            <div class="tab-content" data-tab-content="tab3">Lorem ipsum dolor sit amet.
+            </div>
+
+            <div class="tab" data-tab-button="tab4">Can I use roadmap.sh in my team?<button class="button">v</button>
+            </div>
+            <div class="tab-content" data-tab-content="tab4">Lorem ipsum dolor sit amet.</div>
+
+            <div class="tab" data-tab-button="tab5">How can I create custom readmaps?<button class="button">v</button>
+            </div>
+            <div class="tab-content" data-tab-content="tab5">Lorem ipsum dolor sit amet.</div>
+
+            <div class="tab" data-tab-button="tab6">Is roadmap.sh really 7th most starred project on GitHub?<button
+                    class="button">v</button>
+            </div>
+            <div class="tab-content" data-tab-content="tab6">Lorem ipsum dolor sit amet.</div>
+
+        </div>
+    </div>
+
+    <script>
+
+        function showTab(tabTrigger) {
+            const tabContents = document.querySelectorAll(".tab-content");
+            tabContents.forEach(tab => {
+                const contentKey = tab.dataset.tabContent;
+
+                if ((contentKey === tabTrigger) && (tab.style.display === "none")) {
+                    tab.style.display = "block";
+
+                } else {
+                    tab.style.display = "none";
+                }
+            });
+
+        };
+
+        document.addEventListener("click", function (e) {
+
+            const tabTrigger = e.target.dataset.tabButton;
+            if (tabTrigger) {
+                showTab(tabTrigger);
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            showTab("tab1");
+        })
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
